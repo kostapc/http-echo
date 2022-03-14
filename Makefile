@@ -29,7 +29,7 @@ GOOS ?= $(shell go env GOOS)
 GOARCH ?= $(shell go env GOARCH)
 
 # Default os-arch combination to build
-XC_OS ?= darwin linux windows
+XC_OS ?= linux darwin
 XC_ARCH ?= amd64
 XC_EXCLUDE ?=
 
@@ -44,7 +44,7 @@ LD_FLAGS ?= \
 	-X ${PROJECT}/version.GitCommit=${GIT_COMMIT}
 
 # List of Docker targets to build
-DOCKER_TARGETS ?= scratch alpine
+DOCKER_TARGETS ?= alpine
 
 # List of tests to run
 TEST ?= ./...
